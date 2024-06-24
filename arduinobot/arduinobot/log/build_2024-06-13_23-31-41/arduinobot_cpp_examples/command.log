@@ -1,0 +1,6 @@
+Invoking command in '/home/ros/arduinobot/build/arduinobot_cpp_examples': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake /home/ros/arduinobot/src/arduinobot_cpp_examples -DCMAKE_INSTALL_PREFIX=/home/ros/arduinobot/install/arduinobot_cpp_examples
+Invoked command in '/home/ros/arduinobot/build/arduinobot_cpp_examples' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake /home/ros/arduinobot/src/arduinobot_cpp_examples -DCMAKE_INSTALL_PREFIX=/home/ros/arduinobot/install/arduinobot_cpp_examples
+Invoking command in '/home/ros/arduinobot/build/arduinobot_cpp_examples': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /home/ros/arduinobot/build/arduinobot_cpp_examples -- -j8 -l8
+Invoked command in '/home/ros/arduinobot/build/arduinobot_cpp_examples' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /home/ros/arduinobot/build/arduinobot_cpp_examples -- -j8 -l8
+Invoking command in '/home/ros/arduinobot/build/arduinobot_cpp_examples': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --install /home/ros/arduinobot/build/arduinobot_cpp_examples
+Invoked command in '/home/ros/arduinobot/build/arduinobot_cpp_examples' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --install /home/ros/arduinobot/build/arduinobot_cpp_examples

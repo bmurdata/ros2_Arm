@@ -1,0 +1,24 @@
+[0.436s] Invoking command in '/home/ros/arduinobot/src/arduinobot_py_examples': PYTHONPATH=/home/ros/arduinobot/build/arduinobot_py_examples/prefix_override:/home/ros/arduinobot/install/arduinobot_py_examples/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/arduinobot_py_examples build --build-base /home/ros/arduinobot/build/arduinobot_py_examples/build install --record /home/ros/arduinobot/build/arduinobot_py_examples/install.log --single-version-externally-managed install_data
+[0.587s] running egg_info
+[0.588s] writing ../../build/arduinobot_py_examples/arduinobot_py_examples.egg-info/PKG-INFO
+[0.588s] writing dependency_links to ../../build/arduinobot_py_examples/arduinobot_py_examples.egg-info/dependency_links.txt
+[0.588s] writing entry points to ../../build/arduinobot_py_examples/arduinobot_py_examples.egg-info/entry_points.txt
+[0.588s] writing requirements to ../../build/arduinobot_py_examples/arduinobot_py_examples.egg-info/requires.txt
+[0.588s] writing top-level names to ../../build/arduinobot_py_examples/arduinobot_py_examples.egg-info/top_level.txt
+[0.590s] reading manifest file '../../build/arduinobot_py_examples/arduinobot_py_examples.egg-info/SOURCES.txt'
+[0.590s] writing manifest file '../../build/arduinobot_py_examples/arduinobot_py_examples.egg-info/SOURCES.txt'
+[0.590s] running build
+[0.590s] running build_py
+[0.590s] copying arduinobot_py_examples/simpleSubscriber.py -> /home/ros/arduinobot/build/arduinobot_py_examples/build/lib/arduinobot_py_examples
+[0.591s] running install
+[0.591s] running install_lib
+[0.592s] copying /home/ros/arduinobot/build/arduinobot_py_examples/build/lib/arduinobot_py_examples/simpleSubscriber.py -> /home/ros/arduinobot/install/arduinobot_py_examples/lib/python3.10/site-packages/arduinobot_py_examples
+[0.592s] byte-compiling /home/ros/arduinobot/install/arduinobot_py_examples/lib/python3.10/site-packages/arduinobot_py_examples/simpleSubscriber.py to simpleSubscriber.cpython-310.pyc
+[0.593s] running install_data
+[0.593s] running install_egg_info
+[0.594s] removing '/home/ros/arduinobot/install/arduinobot_py_examples/lib/python3.10/site-packages/arduinobot_py_examples-0.0.0-py3.10.egg-info' (and everything under it)
+[0.594s] Copying ../../build/arduinobot_py_examples/arduinobot_py_examples.egg-info to /home/ros/arduinobot/install/arduinobot_py_examples/lib/python3.10/site-packages/arduinobot_py_examples-0.0.0-py3.10.egg-info
+[0.595s] running install_scripts
+[0.607s] Installing simple_publisher= arduinobot_py_examples.simplePublisher:mainsimple_subscriber script to /home/ros/arduinobot/install/arduinobot_py_examples/lib/arduinobot_py_examples
+[0.607s] writing list of installed files to '/home/ros/arduinobot/build/arduinobot_py_examples/install.log'
+[0.623s] Invoked command in '/home/ros/arduinobot/src/arduinobot_py_examples' returned '0': PYTHONPATH=/home/ros/arduinobot/build/arduinobot_py_examples/prefix_override:/home/ros/arduinobot/install/arduinobot_py_examples/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/arduinobot_py_examples build --build-base /home/ros/arduinobot/build/arduinobot_py_examples/build install --record /home/ros/arduinobot/build/arduinobot_py_examples/install.log --single-version-externally-managed install_data
