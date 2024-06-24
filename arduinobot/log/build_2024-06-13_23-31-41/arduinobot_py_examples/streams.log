@@ -1,0 +1,33 @@
+[0.557s] Invoking command in '/home/ros/arduinobot/src/arduinobot_py_examples': PYTHONPATH=/home/ros/arduinobot/build/arduinobot_py_examples/prefix_override:/home/ros/arduinobot/install/arduinobot_py_examples/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/arduinobot_py_examples build --build-base /home/ros/arduinobot/build/arduinobot_py_examples/build install --record /home/ros/arduinobot/build/arduinobot_py_examples/install.log --single-version-externally-managed install_data
+[0.726s] running egg_info
+[0.726s] creating ../../build/arduinobot_py_examples/arduinobot_py_examples.egg-info
+[0.726s] writing ../../build/arduinobot_py_examples/arduinobot_py_examples.egg-info/PKG-INFO
+[0.727s] writing dependency_links to ../../build/arduinobot_py_examples/arduinobot_py_examples.egg-info/dependency_links.txt
+[0.727s] writing entry points to ../../build/arduinobot_py_examples/arduinobot_py_examples.egg-info/entry_points.txt
+[0.727s] writing requirements to ../../build/arduinobot_py_examples/arduinobot_py_examples.egg-info/requires.txt
+[0.727s] writing top-level names to ../../build/arduinobot_py_examples/arduinobot_py_examples.egg-info/top_level.txt
+[0.727s] writing manifest file '../../build/arduinobot_py_examples/arduinobot_py_examples.egg-info/SOURCES.txt'
+[0.728s] reading manifest file '../../build/arduinobot_py_examples/arduinobot_py_examples.egg-info/SOURCES.txt'
+[0.729s] writing manifest file '../../build/arduinobot_py_examples/arduinobot_py_examples.egg-info/SOURCES.txt'
+[0.729s] running build
+[0.729s] running build_py
+[0.729s] creating /home/ros/arduinobot/build/arduinobot_py_examples/build
+[0.729s] creating /home/ros/arduinobot/build/arduinobot_py_examples/build/lib
+[0.729s] creating /home/ros/arduinobot/build/arduinobot_py_examples/build/lib/arduinobot_py_examples
+[0.729s] copying arduinobot_py_examples/__init__.py -> /home/ros/arduinobot/build/arduinobot_py_examples/build/lib/arduinobot_py_examples
+[0.729s] running install
+[0.729s] running install_lib
+[0.730s] creating /home/ros/arduinobot/install/arduinobot_py_examples/lib/python3.10/site-packages/arduinobot_py_examples
+[0.730s] copying /home/ros/arduinobot/build/arduinobot_py_examples/build/lib/arduinobot_py_examples/__init__.py -> /home/ros/arduinobot/install/arduinobot_py_examples/lib/python3.10/site-packages/arduinobot_py_examples
+[0.731s] byte-compiling /home/ros/arduinobot/install/arduinobot_py_examples/lib/python3.10/site-packages/arduinobot_py_examples/__init__.py to __init__.cpython-310.pyc
+[0.731s] running install_data
+[0.731s] creating /home/ros/arduinobot/install/arduinobot_py_examples/share/ament_index
+[0.731s] creating /home/ros/arduinobot/install/arduinobot_py_examples/share/ament_index/resource_index
+[0.731s] creating /home/ros/arduinobot/install/arduinobot_py_examples/share/ament_index/resource_index/packages
+[0.731s] copying resource/arduinobot_py_examples -> /home/ros/arduinobot/install/arduinobot_py_examples/share/ament_index/resource_index/packages
+[0.731s] copying package.xml -> /home/ros/arduinobot/install/arduinobot_py_examples/share/arduinobot_py_examples
+[0.731s] running install_egg_info
+[0.732s] Copying ../../build/arduinobot_py_examples/arduinobot_py_examples.egg-info to /home/ros/arduinobot/install/arduinobot_py_examples/lib/python3.10/site-packages/arduinobot_py_examples-0.0.0-py3.10.egg-info
+[0.733s] running install_scripts
+[0.747s] writing list of installed files to '/home/ros/arduinobot/build/arduinobot_py_examples/install.log'
+[0.767s] Invoked command in '/home/ros/arduinobot/src/arduinobot_py_examples' returned '0': PYTHONPATH=/home/ros/arduinobot/build/arduinobot_py_examples/prefix_override:/home/ros/arduinobot/install/arduinobot_py_examples/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/arduinobot_py_examples build --build-base /home/ros/arduinobot/build/arduinobot_py_examples/build install --record /home/ros/arduinobot/build/arduinobot_py_examples/install.log --single-version-externally-managed install_data
