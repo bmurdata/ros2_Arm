@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="arduinobot">
+    <xacro:include filename="$(find arduinobot_description)/urdf/arduinobot_gazebo.xacro"/>
+    <xacro:include filename="$(find arduinobot_description)/urdf/arduinobot_ros2_control.xacro"/>
+    
     <xacro:property name="PI" value="3.14159"/>
     <xacro:property name="effort" value="30.0"/>
     <xacro:property name="velocity" value="10.0"/>
@@ -14,6 +17,20 @@
                     izz="1.0"/>
         </inertial>
     </xacro:macro>
+    <!-- Gazebo and transmission for joints-->
+    <xacro:macro name="default_trans" params="number">
+        <transmission name="transmission_${number}">
+            <actuator name="moter_${number}" role="actuator1" />
+            <plugin>transmission_interface/SimpleTransmission</plugin>
+            <joint name="joint_${number}" role="joint1">
+                <!-- one degree of rotation correspondes to one degree of arm rotation-->
+                <mechanical_reduction>1.0</mechanical_reduction>
+
+            </joint>
+
+        </transmission>
+    </xacro:macro>
+    
     <link name="world"/>
     <!-- Tag meaning visual is what is shown, the actual mesh. geometry is the shape, origin shows where is should be displayed
         from, collision and inertia are for simulation in gazebo-->
@@ -216,6 +233,11 @@
         
         <origin xyz="0 0.45 0.2" rpy="0 -0.5 1.57"/>
      </joint>
+
+     <xacro:default_trans number="1"/>
+     <xacro:default_trans number="2"/>
+     <xacro:default_trans number="3"/>
+     <xacro:default_trans number="4"/>
 
      <!-- Gazebo for the camera-->
       
