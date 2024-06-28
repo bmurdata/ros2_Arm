@@ -4,8 +4,23 @@
     <xacro:property name="PI" value="3.14159"/>
     <xacro:property name="effort" value="30.0"/>
     <xacro:property name="velocity" value="10.0"/>
+
+    <xacro:macro name="default_inertial" params="mass">
+        <inertial>
+            <mass value="${mass}"/>
+            <!-- Identity matrix, inertia of link is the same-->
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0"
+                    iyy="1.0" iyz="0.0"
+                    izz="1.0"/>
+        </inertial>
+    </xacro:macro>
     <link name="world"/>
+    <!-- Tag meaning visual is what is shown, the actual mesh. geometry is the shape, origin shows where is should be displayed
+        from, collision and inertia are for simulation in gazebo-->
     <link name="base_link">
+        <xacro:default_inertial mass="1.0" />
+        
+
         <visual>
             <!-- originally xyz set to 0 0 0. For all STL need to play with the values to make it centered
              Changes position of the mesh relative to the link-->
@@ -15,6 +30,12 @@
         </geometry>
         
         </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="-0.5 -0.5 0"/>
+        <geometry>
+            <mesh filename="package://arduinobot_description/meshes/basement.STL" scale="0.01 0.01 0.01"/>
+        </geometry>
+        </collision>
     </link>
     <joint name="virtual_joint" type="fixed">
         <parent link="world"/>
@@ -23,12 +44,19 @@
     </joint>
 
     <link name="base_plate">
+        <xacro:default_inertial mass="0.1" />
         <visual>
             <origin rpy="0 0 0" xyz=" -0.39 -0.39 -0.56"/>
             <geometry>
                 <mesh filename="package://arduinobot_description/meshes/base_plate.STL" scale="0.01 0.01 0.01"/>
             </geometry>
         </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz=" -0.39 -0.39 -0.56"/>
+            <geometry>
+                <mesh filename="package://arduinobot_description/meshes/base_plate.STL" scale="0.01 0.01 0.01"/>
+            </geometry>
+        </collision>
     </link>
     <!-- 
         Unlike the base, this section starts the parts of the robot that can move
@@ -46,12 +74,19 @@
 
     <!-- Link for the rest of the bot- above was for base and main rotation-->
      <link name="forward_drive_arm">
+        <xacro:default_inertial mass="0.1" />
         <visual>
             <origin rpy="0 -${PI/2} ${PI/2}" xyz="0.19 0.06 -0.06"/>
             <geometry>
                 <mesh filename="package://arduinobot_description/meshes/forward_drive_arm.STL" scale="0.01 0.01 0.01"/>
             </geometry>
         </visual>
+        <collision>
+            <origin rpy="0 -${PI/2} ${PI/2}" xyz="0.19 0.06 -0.06"/>
+            <geometry>
+                <mesh filename="package://arduinobot_description/meshes/forward_drive_arm.STL" scale="0.01 0.01 0.01"/>
+            </geometry>
+        </collision>
      </link>
      <!-- Define the second joint for the bot-->
      <joint name="joint_2" type="revolute">
@@ -62,12 +97,19 @@
         <limit lower="-${PI/2}" upper= "${PI/2}" effort="${effort}" velocity="${velocity}"/>
     </joint>
     <link name="horizontal_arm">
+        <xacro:default_inertial mass="0.1" />
         <visual>
             <origin rpy="${PI/2} 0 ${PI/2}" xyz="-0.03 -0.4 -0.06"/>
             <geometry>
                 <mesh filename="package://arduinobot_description/meshes/horizontal_arm.STL" scale="0.01 0.01 0.01"/>
             </geometry>
         </visual>
+        <collision>
+            <origin rpy="${PI/2} 0 ${PI/2}" xyz="-0.03 -0.4 -0.06"/>
+            <geometry>
+                <mesh filename="package://arduinobot_description/meshes/horizontal_arm.STL" scale="0.01 0.01 0.01"/>
+            </geometry>
+        </collision>
 
     </link>
     <joint name="joint_3" type="revolute">
@@ -79,12 +121,19 @@
     </joint>
     <!--  claw Support link and Joint and stuff. I drank a two sangria this better work-->
     <link name="claw_arm">
+        <xacro:default_inertial mass="0.05" />
         <visual>
             <origin rpy="0 0 ${PI/2}" xyz="0 -0.05 -0.15"/>
             <geometry>
                 <mesh filename="package://arduinobot_description/meshes/claw_support.STL" scale="0.01 0.01 0.01"/>
             </geometry>
         </visual>
+        <collision>
+            <origin rpy="0 0 ${PI/2}" xyz="0 -0.05 -0.15"/>
+            <geometry>
+                <mesh filename="package://arduinobot_description/meshes/claw_support.STL" scale="0.01 0.01 0.01"/>
+            </geometry>
+        </collision>
     </link>
     <joint name="horizontal_arm_to_claw" type="fixed">
         <parent link="horizontal_arm"></parent>
@@ -93,21 +142,35 @@
     </joint>
 
     <link name="gripper_right">
+        <xacro:default_inertial mass="0.01" />
         <visual>
             <origin xyz="-0.1 0.5 -0.1" rpy="0 0 -${PI/2}"/>
             <geometry>
                 <mesh filename="package://arduinobot_description/meshes/right_finger.STL" scale="0.01 0.01 0.01" />
             </geometry>
         </visual>
+        <collision>
+            <origin xyz="-0.1 0.5 -0.1" rpy="0 0 -${PI/2}"/>
+            <geometry>
+                <mesh filename="package://arduinobot_description/meshes/right_finger.STL" scale="0.01 0.01 0.01" />
+            </geometry>
+        </collision>
     </link>
 
     <link name="gripper_left">
+        <xacro:default_inertial mass="0.01" />
         <visual>
             <origin xyz="-0.04 0.5 -0.1" rpy="0 0 -${PI/2}"/>
             <geometry>
                 <mesh filename="package://arduinobot_description/meshes/left_finger.STL" scale="0.01 0.01 0.01" />
             </geometry>
         </visual>
+        <collision>
+            <origin xyz="-0.04 0.5 -0.1" rpy="0 0 -${PI/2}"/>
+            <geometry>
+                <mesh filename="package://arduinobot_description/meshes/left_finger.STL" scale="0.01 0.01 0.01" />
+            </geometry>
+        </collision>
     </link>
     <joint name="joint_4" type="revolute">
         <parent link="claw_arm"/>
@@ -127,6 +190,7 @@
 
     <!-- Add RGB camera holder to robot, fixed on the baseplate-->
      <link name="rgb_camera">
+        <xacro:default_inertial mass="0.001"/>
         <visual>
             <!-- Intstructor-->
             
@@ -137,6 +201,14 @@
                 <mesh filename="package://arduinobot_description/meshes/pi_camera.STL" scale="0.01 0.01 0.01"/>
             </geometry>
         </visual>
+        <collision>
+            <origin rpy="-1.57 0 -1.57" xyz="-0.1 0.125 0.15"/>
+            <!--  Mine
+            <origin xyz="-0.01 0.45 0.2" rpy="0 -0.5 1.57"/>-->
+            <geometry>
+                <mesh filename="package://arduinobot_description/meshes/pi_camera.STL" scale="0.01 0.01 0.01"/>
+            </geometry>
+        </collision>
      </link>
      <joint name="rgb_camera_joint" type="fixed">
         <parent link="base_link"/>
@@ -144,4 +216,7 @@
         
         <origin xyz="0 0.45 0.2" rpy="0 -0.5 1.57"/>
      </joint>
+
+     <!-- Gazebo for the camera-->
+      
 </robot>
